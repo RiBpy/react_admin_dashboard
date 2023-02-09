@@ -6,8 +6,8 @@ import Navbar from './components/Navbar';
 import Spinner from './components/Spinner';
 import Data from './db';
 function App() {
-  //localStorage.setItem("Data",JSON.stringify(Data))
   const [phoneObject,setPhoneObject]=useState(Data)
+  
   const searchText=(text)=>{
     text.length>0?setPhoneObject(
       phoneObject.filter(phone=>{
@@ -18,7 +18,7 @@ function App() {
   let singlePhone=phoneObject.map(item=>{
     return {
       id:item._id,
-      img:item.phone_images?.length?item.phone_images[0]:"https://via.placeholder.com/150/0000FF/808080 ?Text=Digital.com",
+      img:item.phone_images?.length?item.phone_images[0]:"https://res.cloudinary.com/towfiqu/image/upload/fl_progressive:steep/v1602744218/masterdeals_v_2.0/biuy8h9emggyzcqefxym.jpg",
       brand:item?.brand,
       title:item?.phone_details?.model,
       ram:item?.phone_details?.ram?item?.phone_details?.ram:item.ram,

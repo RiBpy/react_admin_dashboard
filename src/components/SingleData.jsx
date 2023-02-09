@@ -1,15 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./SingleData.css"
-const SingleData = ({singlePhone,filter}) => {
-    // const [phoneObj,setPhoneObj]=useState(singlePhone)
-    // if(filter==="all"){
-    //   setPhoneObj(singlePhone)
-    // }
-    // const updatedList=phoneObj.filter(obj=>{
-    //     console.log(obj.seller)
-    //     return obj.seller===filter
-    // })
-    // setPhoneObj(updatedList)
+const SingleData = ({singlePhone}) => {
   return (
     <div>
         <table className="table">
