@@ -1,0 +1,20 @@
+.table .product_img{
+    height: 50px;
+    width:50px;
+    margin-right:1vw;
+}
+.table .btn{
+    border-radius: 2px;
+}
+.table .tags .bestVal{
+    border: 1px solid orange;
+    color:orange;
+}
+.table .tags .bestCam{
+    border: 1px solid purple;
+    color:purple;
+}
+.table .tags .bestPer{
+    border: 1px solid rgb(51, 197, 255);
+    color:rgb(51, 197, 255);;
+}
