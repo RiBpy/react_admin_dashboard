@@ -2,16 +2,11 @@ import React, { useState } from 'react'
 import "./AddData.css"
 import {AiOutlineCloseCircle} from "react-icons/ai"
 import {MdOutlinePublishedWithChanges} from "react-icons/md"
-import {Multiselect} from 'multiselect-react-dropdown'
+
 function AddData({setPhoneObject}) {
-    let  tags=[
-        {label:"Best Value",value:"best_value"},
-        {label:"Best Performance",value:"best_performance"},
-        {label:"Best Camera",value:"best_camera"},
-        
-    ]
+    
     const [newData,setNewData]=useState({})
-    // const [selectedTag,setSelectedTag]=useState("")
+
 
     const handleChange=(e)=>{
        setNewData(prevState=>({
@@ -32,7 +27,6 @@ function AddData({setPhoneObject}) {
      ))
      setNewData({})
    }
-   console.log(newData)
   return (
      <div>
         <button className="btn btn-light px-3 add_btn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit">Add Product</button>
@@ -63,25 +57,13 @@ function AddData({setPhoneObject}) {
                     </div>
                     <div className="col-md-12">
                         <label  className="form-label">Tags</label>
-                             
-
-                        <Multiselect
-                            onKeyPressFn={function noRefCheck(){}}
-                            onRemove={function noRefCheck(){}}
-                            onSearch={function noRefCheck(){}}
-                            onSelect={function noRefCheck(){}}
-                            name={"value"}
-                            options={tags}
-                            displayValue="label"
-                            onChange={(e)=>handleChange(e.target)}
-
-                         />
-                        {/* <select className="form-select" id="validationCustom04" name="tag" value ={newData.tag??""} required onChange={(e)=> handleChange(e.target)}>
+                     
+                        <select className="form-select" id="validationCustom04" name="tag" value ={newData.tag??""} required onChange={(e)=> handleChange(e.target)}>
                         <option value="">Search and Select</option>
                         <option  value="best_value">Best Value</option>
                         <option  value="best_performance">Best Performance</option>
                         <option  value="best_camera">Best Camera</option>
-                        </select> */}
+                        </select>
                     </div>
                     <div className="col-md-12">
                         <label  className="form-label">Price</label>
