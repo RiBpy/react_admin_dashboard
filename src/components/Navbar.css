@@ -2,30 +2,26 @@
     background: #10665f;
     height:6vw;
 }
-.nav-input{
-    background: #10665f;
-    border-radius: 2px;
-    height:3.5vw;
-    width:7vw;
-    color:black
-}
-.nav-input::placeholder{
-    color:white;
-
-}
-.search_icon{
-    background:transparent;
-    color:#ffffff;
-    font-size: 1.6vw;
-   /* padding:.5vw 1vw 1vw 0; */
-    height: 3.5vw;
-}
-.icon{
-   padding-right: 1vw; 
-}
 .navbar .btn{
     height: 3.5vw;
     border-radius: 2px;
     color:#10665f;
     font-weight: bold;
+}
+@media screen and (max-width:768px) {
+    .navbar{
+        height:10vw;
+    }
+    .navbar .logo{
+        display: none;
+}
+
+.navbar .btn{
+    height: 5vw;
+}
+}
+@media screen and (max-width:486px) {
+    .navbar{
+        height:10vw;
+    }
 }
