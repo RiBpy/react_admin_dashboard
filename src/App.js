@@ -23,7 +23,7 @@ function App() {
       id:item._id,
       img:item.phone_images?.length?item.phone_images[0]:"https://res.cloudinary.com/towfiqu/image/upload/fl_progressive:steep/v1602744218/masterdeals_v_2.0/biuy8h9emggyzcqefxym.jpg",
       brand:item?.brand,
-      title:item?.phone_details?.model,
+      title:item?.phone_details?.model ? item?.phone_details?.model:item.title,
       ram:item?.phone_details?.ram?item?.phone_details?.ram:item.ram,
       rom:item?.phone_details?.internal_storage?item?.phone_details?.internal_storage:item.rom,
       price:item?.phone_price,
