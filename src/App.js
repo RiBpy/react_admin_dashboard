@@ -8,13 +8,16 @@ import Data from './db';
 function App() {
   const [phoneObject,setPhoneObject]=useState(Data)
   
+
   const searchText=(text)=>{
+    console.log(text.length)
     text.length>0?setPhoneObject(
       phoneObject.filter(phone=>{
         return phone.brand.toLowerCase()===text.toLowerCase()||phone.phone_title.toLowerCase()===text.toLowerCase()
       })
     ):setPhoneObject(Data)
   }
+ 
   let singlePhone=phoneObject.map(item=>{
     return {
       id:item._id,
@@ -48,22 +51,23 @@ function App() {
          <Navbar onSubmit={searchText} setPhoneObject={setPhoneObject}/>
          <div className='container'>
             <div className='row my-5'>
-              <div className='col-md-6'><PieChart singlePhone={singlePhone}/></div>
-              <div className='col-md-6'> <BarChart singlePhone={singlePhone}/></div>
+              <div className='col-lg-6 '><PieChart singlePhone={singlePhone}/></div>
+              <div className='col-lg-6 '> <BarChart singlePhone={singlePhone}/></div>
             </div>
          </div>
-                <div className='container' >
-                  <div className='row my-5'>
-                    <div className='col-md-12 '>
-                      <AllData singlePhone={singlePhone}/>
-                    </div>  
-                  </div>
-                </div>
+        <div className='container' >
+          <div className='row my-5'>
+            <div className='col-md-12 '>
+              <AllData singlePhone={singlePhone}/>
+              
+            </div>  
+          </div>
+        </div>
             
          <div className='container'>
              <div className='row my-5'>
                 <div className='col-md-12 '>
-                  {singlePhone.length?<Spinner/>:null}
+                  {!singlePhone?<Spinner/>:null}
                 </div>  
              </div>
          </div>

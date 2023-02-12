@@ -39,7 +39,7 @@ function BarChart({singlePhone}) {
               style: { fontSize:25 },
             },
 
-            colors: ["#27829c"],
+            colors: ["#27829c"], 
             xaxis: {
               categories: [
                 "Official",
