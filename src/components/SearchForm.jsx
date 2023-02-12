@@ -15,9 +15,7 @@ const SearchForm=({onSubmit})=>{
         <div className="input-group me-3  ">
             <input className="form-control nav-input border-end-0 border" value={input} type="search" placeholder="Search By Title or Brand" id="example-search-input" onChange={handleSearch}/>
             <span className="input-group-append">
-                <button className="search_icon  border-start-0 border " type="button">
-                    <i className="icon" onClick={handleSubmit}><FaSearch/></i>
-                </button>
+               <span className="input-group-text" id="basic-addon2"><i className="icon" onClick={handleSubmit}><FaSearch/></i></span>
             </span>
         </div>
      </form>
