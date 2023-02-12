@@ -48,8 +48,8 @@ function App() {
          <Navbar onSubmit={searchText} setPhoneObject={setPhoneObject}/>
          <div className='container'>
             <div className='row my-5'>
-              <div className='col-md-6'><PieChart singlePhone={singlePhone}/></div>
-              <div className='col-md-6'> <BarChart singlePhone={singlePhone}/></div>
+              <div className='col-lg-6'><PieChart singlePhone={singlePhone}/></div>
+              <div className='col-lg-6'> <BarChart singlePhone={singlePhone}/></div>
             </div>
          </div>
                 <div className='container' >
