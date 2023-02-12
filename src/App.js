@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import AllData from './components/AllData';
 import BarChart from './components/BarChart';
 import PieChart from './components/PieChart';
 import Navbar from './components/Navbar';
 import Spinner from './components/Spinner';
+import Pagination from './components/Pagination';
 import Data from './db';
 function App() {
   const [phoneObject,setPhoneObject]=useState(Data)
-  
+
 
   const searchText=(text)=>{
     console.log(text.length)
